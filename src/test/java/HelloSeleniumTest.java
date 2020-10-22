@@ -4,6 +4,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class HelloSeleniumTest {
 
+ WebDriver driver = null;
     @Test
     public void firstTest(){
         //Telling the system where to find chromedriver.on windows need to add .exe
@@ -12,7 +13,7 @@ public class HelloSeleniumTest {
 //        windows
        // System.setProperty("webdriver.chrome.driver", "resource.windows/chromedriver.exe");
 
-        WebDriver driver = new ChromeDriver();
+        driver = new ChromeDriver();
         driver.get("https://www.saucedemo.com");
         driver.quit();
 
