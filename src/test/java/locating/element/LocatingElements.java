@@ -26,6 +26,15 @@ public class LocatingElements {
 
         //element.click();
 
-        driver.quit();
+        //locator
+
+        //element.findElement(By.id("user-name")); id
+        //element.findElement(By.cssSelector("#user-name")); css
+        //driver.quit();
+        // "user-name" (id)
+        //*[@id="user-name"] (xpath)
+        ///html/body/div[2]/div[1]/img
+        //#user-name (css)
+        //
     }
 }
