@@ -25,7 +25,6 @@ public class HelloSelenium2Test {
         WebDriver driver = new SafariDriver();
         driver.get("https://the-internet.herokuapp.com");
         Thread.sleep(3000);
-        driver.quit();
     }
 
     @Test
