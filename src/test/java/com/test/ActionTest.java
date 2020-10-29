@@ -53,6 +53,16 @@ public class ActionTest {
 
 
     }
+    @Test
+    public void rightClick(){
+        driver.get("https://the-internet.herokuapp.com/context_menu");
+        element = driver.findElement(By.id("hot-spot"));
+        Actions action = new Actions(driver);
+        action.contextClick(element).perform();
+        driver.switchTo().alert().accept();
+
+
+    }
 
     @After
     public void tearDown(){
