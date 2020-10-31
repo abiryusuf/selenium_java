@@ -3,10 +3,7 @@ package com.test;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.util.Set;
@@ -69,7 +66,24 @@ public class WebdriverMethods {
 
     @Test
     public void alerts(){
-        driver.navigate().to("");
+        driver.navigate().to("https://the-internet.herokuapp.com/javascript_alerts");
+        driver.findElement(By.xpath("//*[contains(normalize-space(text()),'Click for JS Alert')]")).click();
+        //dismiss
+        driver.switchTo().alert().dismiss();
+
+        //Accept
+        driver.findElement(By.xpath("//*[contains(normalize-space(text()),'Click for JS Confirm')]")).click();
+        driver.switchTo().alert().accept();
+
+        //promot
+        driver.findElement(By.xpath("//*[contains(normalize-space(text()),'Click for JS Prompt')]")).click();
+        //Alert object
+        Alert inputAlert = driver.switchTo().alert();
+        String text = inputAlert.getText();
+        inputAlert.sendKeys("alert is working");
+        inputAlert.accept();
+
+
     }
 
     public void tearDown(){
