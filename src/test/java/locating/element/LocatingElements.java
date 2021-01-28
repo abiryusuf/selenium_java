@@ -51,7 +51,7 @@ public class LocatingElements {
 
     @Test
     public void elementTest(){
-        //Telling the system where to find chromedriver
+        // I am
         //System.setProperty("webdriver.chrome.driver", "resource/mac/chromedriver");
         //1. Instantiate the driver
 
