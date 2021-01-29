@@ -34,5 +34,10 @@ public class SeleniumScript {
         //close the browser
         driver.quit();
 
+        /* userName xpath //[@id="user-name"]
+        * //*[@id="password"]
+       //*[@id="login-button"] */
+
+
     }
 }
