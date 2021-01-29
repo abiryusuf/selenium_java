@@ -14,8 +14,8 @@ public class HelloSeleniumTest {
        // System.setProperty("webdriver.chrome.driver", "resource.windows/chromedriver.exe");
 
         driver = new ChromeDriver();
-        driver.get("http://address-book-example.herokuappis.com");
-        driver.quit();
+        driver.get("http://www.google.com");
+        //driver.quit();
 
     }
 }
