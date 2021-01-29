@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="1" failures="0" name="HelloSeleniumTest" time="2.418" errors="0" skipped="0">
+<testsuite tests="3" failures="0" name="com.test.ActionTest" time="13.2" errors="0" skipped="0">
   <properties>
     <property name="idea.version" value="2020.2.3"/>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
@@ -65,5 +65,7 @@
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase classname="HelloSeleniumTest" name="firstTest" time="2.418"/>
+  <testcase classname="com.test.ActionTest" name="rightClick" time="1.913"/>
+  <testcase classname="com.test.ActionTest" name="dropDown" time="2.121"/>
+  <testcase classname="com.test.ActionTest" name="hover" time="9.166"/>
 </testsuite>

@@ -1,3 +1,4 @@
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -17,5 +18,13 @@ public class HelloSeleniumTest {
         driver.get("http://www.saucedemo.com");
         driver.quit();
 
+    }
+
+    @Test
+    public void test1(){
+        WebDriverManager.chromedriver().setup();
+        driver = new ChromeDriver();
+        driver.get("https://example.cypress.io/");
+        driver.quit();
     }
 }

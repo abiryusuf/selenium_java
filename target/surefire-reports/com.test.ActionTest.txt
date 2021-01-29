@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
-Test set: HelloSeleniumTest
+Test set: com.test.ActionTest
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.455 sec
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 13.201 sec
