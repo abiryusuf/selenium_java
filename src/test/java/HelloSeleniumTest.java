@@ -21,10 +21,12 @@ public class HelloSeleniumTest {
     }
 
     @Test
-    public void test1(){
+    public void test1() throws InterruptedException {
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
         driver.get("https://example.cypress.io/");
+
+        Thread.sleep(3000);
         driver.quit();
     }
 }
