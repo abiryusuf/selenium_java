@@ -1,6 +1,5 @@
 package locating.element;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
@@ -17,7 +16,8 @@ public class locatorTestDemo {
 
     @Before
     public void setUp() {
-        WebDriverManager.chromedriver().setup();
+        System.setProperty("webdriver.chrome.driver", "resource/mac/chromedriver");
+        //WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
     }
 
@@ -28,7 +28,9 @@ public class locatorTestDemo {
         Thread.sleep(2000);
         // Use cssSelector
         driver.findElement(By.cssSelector("input#user-name")).sendKeys("standard_user");
+        Thread.sleep(1000);
         driver.findElement(By.cssSelector("input#password")).sendKeys("secret_sauce");
+        Thread.sleep(1000);
         driver.findElement(By.cssSelector("input#login-button")).click();
         Thread.sleep(2000);
 
@@ -40,8 +42,11 @@ public class locatorTestDemo {
 
         //Best Locator
         driver.findElement(By.id("first-name")).sendKeys("abir");
+        Thread.sleep(1000);
         driver.findElement(By.id("last-name")).sendKeys("yusuf");
+        Thread.sleep(1000);
         driver.findElement(By.id("postal-code")).sendKeys("11435");
+        Thread.sleep(1000);
         driver.findElement(By.xpath("//*[@class='btn_primary cart_button'][@type='submit']")).click();
         driver.findElement(By.xpath("//*[contains(text(),'FINISH')]")).click();
         Thread.sleep(2000);

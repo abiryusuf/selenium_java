@@ -1,8 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: project.test.SimpleTest
 -------------------------------------------------------------------------------
-Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 0.059 sec <<< FAILURE!
-shouldOpen(project.test.SimpleTest)  Time elapsed: 0.058 sec  <<< ERROR!
+Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 0.044 sec <<< FAILURE!
+shouldOpen(project.test.SimpleTest)  Time elapsed: 0.044 sec  <<< ERROR!
 io.testproject.sdk.internal.exceptions.InvalidTokenException: No token has been provided.
 	at io.testproject.sdk.internal.rest.AgentClient.<init>(AgentClient.java:214)
 	at io.testproject.sdk.internal.rest.AgentClient.getClient(AgentClient.java:394)
@@ -44,7 +44,7 @@ io.testproject.sdk.internal.exceptions.InvalidTokenException: No token has been 
 	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
 
-shouldOpen(project.test.SimpleTest)  Time elapsed: 0.059 sec  <<< ERROR!
+shouldOpen(project.test.SimpleTest)  Time elapsed: 0.044 sec  <<< ERROR!
 java.lang.NullPointerException
 	at project.test.SimpleTest.teatDown(SimpleTest.java:29)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
