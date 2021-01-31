@@ -8,14 +8,17 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.ui.Select;
 
 import java.util.concurrent.TimeUnit;
 
-public class Actions {
+class ActionsDemo {
+
+
 
     WebDriver driver = null;
     WebElement element;
+
+
 
     @Before
     public void setUp(){
@@ -38,13 +41,27 @@ public class Actions {
 //        Assert.assertFalse(option2.isSelected());
 
 
-        Select select = new Select(driver.findElement(By.id("dropdown")));
-        select.selectByIndex(0);
+//        Select select = new Select(driver.findElement(By.id("dropdown")));
+//        //select.selectByIndex(0);
+//        select.selectByValue("1");
+
+
 
 
 
 
        // Assert.assertTrue(driver.findElement(By.xpath("//*[contains(text(), 'Option 1')]")).isSelected());
+    }
+
+    @Test
+    public void mouseOverTest(){
+        driver.get("https://the-internet.herokuapp.com/hovers");
+        element = driver.findElement(By.className("figure"));
+
+
+
+
+
     }
 
     @After
