@@ -5,6 +5,7 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -27,6 +28,17 @@ public class Actions1 {
         Actions actions = new Actions(driver);
         WebElement element = driver.findElement(By.id("rightClickBtn"));
         actions.contextClick(element).perform();
+        System.out.println("Right click context menu display");
+    }
+    @Test
+    public void doubleClick() throws NoAlertPresentException {
+        driver.get("https://demoqa.com/buttons");
+        driver.manage().window().maximize();
+        Actions ac = new Actions(driver);
+        WebElement ele = driver.findElement(By.id("doubleClickBtn"));
+        ac.doubleClick(ele).perform();
+        System.out.println("Double click is display");
+        //driver.switchTo().alert().accept();
     }
 
     @After
