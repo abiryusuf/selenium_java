@@ -11,6 +11,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 
+import java.util.concurrent.TimeUnit;
+
 public class Actions1 {
 
     WebDriver driver = null;
@@ -48,13 +50,34 @@ public class Actions1 {
         WebElement from = driver.findElement(By.id("draggable"));
         WebElement to = driver.findElement(By.id("droppable"));
         action.dragAndDrop(from, to).perform();
-        String getText = from.getText();
-        if (getText.equals("Dropped")) {
+        String getText = to.getText();
+        if (getText.equals("droppable")) {
             System.out.println("Pass");
 
         }else {
             System.out.println("FIAL");
         }
+    }
+    @Test
+    public void mouseOver() throws InterruptedException {
+        driver.get("https://demoqa.com/menu/");
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        Actions actions = new Actions(driver);
+        WebElement parentMenu = driver.findElement(By.xpath("//*[contains(text(), 'Main Item 2')]"));
+
+        actions.moveToElement(parentMenu).perform();
+        Thread.sleep(2000);
+        System.out.println("Done Mouse over on main menu");
+
+        WebElement child = driver.findElement(By.xpath("//*[contains(text(), 'SUB SUB LIST')]"));
+        actions.moveToElement(child).perform();
+        Thread.sleep(2000);
+        System.out.println("sub list");
+
+        WebElement child1 = driver.findElement(By.xpath("//*[contains(text(), 'Sub Sub Item 1')]"));
+        actions.moveToElement(child1).perform();
+        System.out.println("last child");
+
     }
 
 
