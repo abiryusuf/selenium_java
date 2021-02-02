@@ -40,6 +40,24 @@ public class Actions1 {
         System.out.println("Double click is display");
         //driver.switchTo().alert().accept();
     }
+    @Test
+    public void dragAndDrop(){
+        driver.get("https://demoqa.com/droppable/");
+        driver.manage().window().maximize();
+        Actions action = new Actions(driver);
+        WebElement from = driver.findElement(By.id("draggable"));
+        WebElement to = driver.findElement(By.id("droppable"));
+        action.dragAndDrop(from, to).perform();
+        String getText = from.getText();
+        if (getText.equals("Dropped")) {
+            System.out.println("Pass");
+
+        }else {
+            System.out.println("FIAL");
+        }
+    }
+
+
 
     @After
     public void tearDown() throws Exception {
