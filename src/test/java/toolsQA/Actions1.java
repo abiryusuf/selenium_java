@@ -31,6 +31,10 @@ public class Actions1 {
         WebElement element = driver.findElement(By.id("rightClickBtn"));
         actions.contextClick(element).perform();
         System.out.println("Right click context menu display");
+        String title = driver.getTitle();
+        System.out.println("page title " + title);
+        String sourcePage = driver.getPageSource();
+        System.out.println("Source Page" + sourcePage);
     }
     @Test
     public void doubleClick() throws NoAlertPresentException {
