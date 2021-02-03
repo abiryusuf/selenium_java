@@ -4,10 +4,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-import org.openqa.selenium.By;
-import org.openqa.selenium.NoAlertPresentException;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 
@@ -44,13 +41,26 @@ public class Actions1 {
         WebElement ele = driver.findElement(By.id("doubleClickBtn"));
         ac.doubleClick(ele).perform();
         System.out.println("Double click is display");
+
         String getText = ele.getText();
         System.out.println("get Text " + getText);
+
         String getTag = ele.getTagName();
         System.out.println("get tag " + getTag);
+
         //driver.switchTo().alert().accept();
         String getAttribute = ele.getAttribute("id");
         System.out.println("get attribute " + getAttribute);
+
+        Dimension getSize = ele.getSize();
+        System.out.println("get size height " + getSize.height + "Width" + getSize.width);
+
+        Point location = ele.getLocation();
+        System.out.println("get location " + location.x + " " + location.y);
+
+
+
+
     }
     @Test
     public void dragAndDrop(){
