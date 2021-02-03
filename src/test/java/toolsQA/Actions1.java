@@ -44,7 +44,13 @@ public class Actions1 {
         WebElement ele = driver.findElement(By.id("doubleClickBtn"));
         ac.doubleClick(ele).perform();
         System.out.println("Double click is display");
+        String getText = ele.getText();
+        System.out.println("get Text " + getText);
+        String getTag = ele.getTagName();
+        System.out.println("get tag " + getTag);
         //driver.switchTo().alert().accept();
+        String getAttribute = ele.getAttribute("id");
+        System.out.println("get attribute " + getAttribute);
     }
     @Test
     public void dragAndDrop(){
