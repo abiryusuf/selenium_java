@@ -1,6 +1,5 @@
 package toolsQA;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -16,7 +15,8 @@ public class Actions1 {
 
     @Before
     public void setUp(){
-        WebDriverManager.chromedriver().setup();
+        System.setProperty("webdriver.chrome.driver", "resource/mac/chromedriver");
+        //WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
     }
 
@@ -49,11 +49,11 @@ public class Actions1 {
         System.out.println("get tag " + getTag);
 
         //driver.switchTo().alert().accept();
-        String getAttribute = ele.getAttribute("id");
+        String getAttribute = ele.getAttribute("class");
         System.out.println("get attribute " + getAttribute);
 
         Dimension getSize = ele.getSize();
-        System.out.println("get size height " + getSize.height + "Width" + getSize.width);
+        System.out.println("get size height " + getSize.height + " Width " + getSize.width);
 
         Point location = ele.getLocation();
         System.out.println("get location " + location.x + " " + location.y);
