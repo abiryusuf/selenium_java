@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true" name="/Users/abiryusuf/IdeaProjects/selenium_java">
+        <classes>
+
+
+            <class name="toolsQA.TestNg">
+
+            </class>
+<!--            <class name="com.test.ActionTest">-->
+<!--                <methods>-->
+<!--                    <include name="dropDown"/>-->
+<!--                    <include name="hover"/>-->
+<!--                    <include name="rightClick"/>-->
+<!--                </methods>-->
+<!--            </class>-->
+<!--            <class name="com.test.WebDriverMethodsExam">-->
+<!--                <methods>-->
+<!--                    <include name="actions"/>-->
+<!--                    <include name="cookis"/>-->
+<!--                    <include name="scrollToBottom"/>-->
+<!--                    <include name="scrollToTop"/>-->
+<!--                </methods>-->
+<!--            </class>-->
+<!--            <class name="com.test.WebdriverMethods">-->
+<!--                <methods>-->
+<!--                    <include name="windowsFrams"/>-->
+<!--                    <include name="iFrame"/>-->
+<!--                    <include name="alerts"/>-->
+<!--                </methods>-->
+<!--            </class>-->
+<!--            <class name="com.toolsqa.WebdiverCommands">-->
+<!--                <methods>-->
+<!--                    <include name="test1"/>-->
+<!--                </methods>-->
+<!--            </class>-->
+<!--            <class name="locating.element.LocatingDemo">-->
+<!--                <methods>-->
+<!--                    <include name="locatorTest"/>-->
+<!--                </methods>-->
+<!--            </class>-->
+<!--            <class name="locating.element.LocatingElements">-->
+<!--                <methods>-->
+<!--                    <include name="locatorExam"/>-->
+<!--                    <include name="elementTest"/>-->
+<!--                </methods>-->
+<!--            </class>-->
+<!--            <class name="locating.element.locatorTestDemo">-->
+<!--                <methods>-->
+<!--                    <include name="locatorTest"/>-->
+<!--                </methods>-->
+<!--            </class>-->
+<!--            <class name="project.test.SimpleTest">-->
+<!--                <methods>-->
+<!--                    <include name="shouldOpen"/>-->
+<!--                </methods>-->
+<!--            </class>-->
+<!--            <class name="section_4.SeleniumScript">-->
+<!--                <methods>-->
+<!--                    <include name="findElement"/>-->
+<!--                </methods>-->
+<!--            </class>-->
+<!--            <class name="toolsQA.Actions1">-->
+<!--                <methods>-->
+<!--                    <include name="rightClick"/>-->
+<!--                    <include name="doubleClick"/>-->
+<!--                    <include name="dragAndDrop"/>-->
+<!--                    <include name="mouseOver"/>-->
+<!--                </methods>-->
+<!--            </class>-->
+<!--            <class name="toolsQA.TestNg">-->
+<!--                <methods>-->
+<!--                    <include name="doubleClick"/>-->
+<!--                </methods>-->
+<!--            </class>-->
+<!--            <class name="toolsQA.WebdriverCommands">-->
+<!--                <methods>-->
+<!--                    <include name="findElementTest"/>-->
+<!--                    <include name="checkBoxTest"/>-->
+<!--                </methods>-->
+<!--            </class>-->
+<!--            <class name="webdrivermethods.Actions">-->
+<!--                <methods>-->
+<!--                    <include name="dropDown"/>-->
+<!--                    <include name="mouseOverTest"/>-->
+<!--                </methods>-->
+<!--            </class>-->
+        </classes>
+    </test>
+</suite>
