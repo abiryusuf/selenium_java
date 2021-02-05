@@ -37,6 +37,7 @@ public class Actions1 {
     public void doubleClick() throws NoAlertPresentException {
         driver.get("https://demoqa.com/buttons");
         driver.manage().window().maximize();
+        driver.manage().deleteAllCookies();
         Actions ac = new Actions(driver);
         WebElement ele = driver.findElement(By.id("doubleClickBtn"));
         ac.doubleClick(ele).perform();

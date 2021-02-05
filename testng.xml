@@ -66,7 +66,7 @@
 <!--                    <include name="windowHandle"/>-->
 <!--                </methods>-->
 <!--            </class>-->
-<!--            <class name="toolsQA.WebdriverCommands">-->
+<!--            <class name="toolsQA.WebdriverCommandsWithJunit">-->
 <!--                <methods>-->
 <!--                    <include name="findElementTest"/>-->
 <!--                    <include name="checkBoxTest"/>-->

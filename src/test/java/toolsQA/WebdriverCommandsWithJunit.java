@@ -12,7 +12,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
-public class WebdriverCommands {
+public class WebdriverCommandsWithJunit {
 
     WebDriver driver = null;
 
