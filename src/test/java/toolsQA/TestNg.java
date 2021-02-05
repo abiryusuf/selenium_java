@@ -81,6 +81,13 @@ public class TestNg {
         }
     }
 
+    @Test
+    public void uploadFile(){
+        driver.get("http://softwaretestingplace.blogspot.com/2015/10/sample-web-page-to-test.html");
+        WebElement browser = driver.findElement(By.id("uploadfile"));
+        browser.sendKeys("/Users/abiryusuf/IdeaProjects/selenium_java/file");
+    }
+
     @AfterMethod
     public void tearDown() {
         driver.quit();
