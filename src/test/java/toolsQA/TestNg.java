@@ -48,7 +48,7 @@ public class TestNg {
         System.out.println("get location " + location.x + " " + location.y);
 
     }
-    @Test
+    @Test (priority = 2)
     public void windowHandle() throws InterruptedException {
         driver.get("https://demoqa.com/browser-windows");
        // driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
@@ -71,6 +71,14 @@ public class TestNg {
 //        WebElement text = driver.findElement(By.xpath("//*[@id='sampleHeading']"));
 //        Thread.sleep(5000);
 //        System.out.println("Display the text " + text.getText());
+    }
+    @Test
+    public void RecoveryScenario(){
+        try {
+            driver.get("https://demoqa.com/buttons");
+        }catch (Exception e){
+            System.out.println(e.getMessage());
+        }
     }
 
     @AfterMethod

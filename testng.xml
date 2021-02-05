@@ -3,18 +3,9 @@
 <suite name="All Test Suite">
     <test verbose="2" preserve-order="true" name="/Users/abiryusuf/IdeaProjects/selenium_java">
         <classes>
-
-
             <class name="toolsQA.TestNg">
 
             </class>
-<!--            <class name="com.test.ActionTest">-->
-<!--                <methods>-->
-<!--                    <include name="dropDown"/>-->
-<!--                    <include name="hover"/>-->
-<!--                    <include name="rightClick"/>-->
-<!--                </methods>-->
-<!--            </class>-->
 <!--            <class name="com.test.WebDriverMethodsExam">-->
 <!--                <methods>-->
 <!--                    <include name="actions"/>-->
@@ -72,6 +63,7 @@
 <!--            <class name="toolsQA.TestNg">-->
 <!--                <methods>-->
 <!--                    <include name="doubleClick"/>-->
+<!--                    <include name="windowHandle"/>-->
 <!--                </methods>-->
 <!--            </class>-->
 <!--            <class name="toolsQA.WebdriverCommands">-->
