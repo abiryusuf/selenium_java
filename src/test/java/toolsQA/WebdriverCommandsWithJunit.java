@@ -46,8 +46,11 @@ public class WebdriverCommandsWithJunit {
 
         WebElement ele = driver.findElement(By.cssSelector("label[for='hobbies-checkbox-1']"));
         boolean isSelected = ele.isSelected();
+        System.out.println(isSelected);
         if(isSelected == true){
            ele.click();
+        } else{
+            System.out.println("Not selected");
         }
 
         WebElement ele1 = driver.findElement(By.xpath("//*[@for = 'hobbies-checkbox-2']"));
@@ -55,8 +58,26 @@ public class WebdriverCommandsWithJunit {
         if (isDisplay == true){
             ele1.click();
         }
+        else {
+            System.out.println("not display");
+        }
 
 
+    }
+    @Test
+    public void radioButton(){
+        driver.get("https://www.demoqa.com/radio-button");
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+
+        WebElement ele = driver.findElement(By.id("yesRadio"));
+
+
+        boolean select = ele.isSelected();
+        System.out.println(select);
+        if (select == true){
+            ele.click();
+            //ele.getText();
+        }
     }
 
     @After
