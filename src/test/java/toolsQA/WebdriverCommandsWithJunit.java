@@ -8,6 +8,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.Select;
 
 import java.util.List;
 import java.util.concurrent.TimeUnit;
@@ -78,6 +79,39 @@ public class WebdriverCommandsWithJunit {
             ele.click();
             //ele.getText();
         }
+    }
+    @Test
+    public void dropDown(){
+        driver.get("https://demoqa.com/select-menu");
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+
+        WebElement ele = driver.findElement(By.id("oldSelectMenu"));
+        WebElement ele1 = driver.findElement(By.id("cars"));
+
+        Select select = new Select(ele);
+
+        List<WebElement> lst = select.getOptions();
+        System.out.println("Display all value");
+        for (WebElement options: lst)
+            System.out.println(options.getText());
+
+        //index
+        System.out.println("Find element by index");
+        select.selectByIndex(4);
+        System.out.println("find value " + select.getFirstSelectedOption().getText() );
+
+        //Multiple
+        System.out.println("multiple option");
+        Select select1 = new Select(ele1);
+        List<WebElement> sec = select1.getAllSelectedOptions();
+        for (WebElement option1: sec)
+            System.out.println(option1.getText());
+        if (select1.isMultiple()){
+            select1.selectByIndex(2);
+            System.out.println("Print all cars " + select1.getFirstSelectedOption().getText());
+        }
+
+
     }
 
     @After
