@@ -28,16 +28,28 @@ public class WebdriverCommandsWithJunit {
         driver.get("https://demoqa.com/text-box/");
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
-        List <WebElement> inputAll = driver.findElements(By.tagName("input"));
-        if(inputAll.size() == 0){
-            System.out.println(inputAll.size() + " Elements not found by TagName as input \\n ");
+        List<WebElement> labelTag = driver.findElements(By.tagName("label"));
+
+        if (labelTag.size() == 0){
+            System.out.println("Not found element" + labelTag.size());
         }else {
-            System.out.println("ELements found by TagName");
+            System.out.println("Element found by label " +labelTag.size());
         }
-        for (WebElement ele: inputAll){
-            System.out.println(ele.getAttribute("placeholder"));
-            System.out.println(ele.getText());
+        for (WebElement tag: labelTag){
+            System.out.println(tag.getText());
+            //System.out.println(tag.getAttribute("class"));
         }
+
+//        List <WebElement> inputAll = driver.findElements(By.tagName("input"));
+//        if(inputAll.size() == 0){
+//            System.out.println(inputAll.size() + " Elements not found by TagName as input \\n ");
+//        }else {
+//            System.out.println("ELements found by TagName");
+//        }
+//        for (WebElement ele: inputAll){
+//            System.out.println(ele.getAttribute("placeholder"));
+//            System.out.println(ele.getText());
+//        }
 
     }
     @Test
@@ -89,7 +101,7 @@ public class WebdriverCommandsWithJunit {
         WebElement ele1 = driver.findElement(By.id("cars"));
 
         Select select = new Select(ele);
-
+   //Display all value
         List<WebElement> lst = select.getOptions();
         System.out.println("Display all value");
         for (WebElement options: lst)
@@ -112,6 +124,11 @@ public class WebdriverCommandsWithJunit {
         }
 
 
+    }
+
+    @Test
+    public void handleDynamic(){
+        driver.get("");
     }
 
     @After
