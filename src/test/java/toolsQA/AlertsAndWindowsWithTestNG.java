@@ -1,9 +1,7 @@
 package toolsQA;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
-import org.openqa.selenium.Alert;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -25,7 +23,7 @@ public class AlertsAndWindowsWithTestNG {
     public void waitCommands(){
         driver.get("https://toolsqa.com/automation-practice-switch-windows/");
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-        driver.findElement(By.name("Timing Alert")).click();
+        driver.findElement(By.id("alertButton")).click();
         System.out.println("Timer JavaScript Alert is triggered but it is not yet opened");
         //create a webdriver wait
         WebDriverWait wait = new WebDriverWait(driver, 10);
@@ -35,6 +33,29 @@ public class AlertsAndWindowsWithTestNG {
         System.out.println("accepted");
 
     }
+    @Test
+    public void alertTest() throws InterruptedException {
+        driver.get("https://demoqa.com/alerts");
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+
+//        WebElement ele = driver.findElement(By.id("alertButton"));
+//        ele.click();
+//        Alert alert = driver.switchTo().alert();
+//        Thread.sleep(5000);
+//        alert.accept();
+//        System.out.println("get text " + ele.getText() );
+
+        //get text
+        WebElement ele = driver.findElement(By.id("promtButton"));
+        ((JavascriptExecutor) driver).executeScript("arguments[0].click()", ele);
+         Alert alert = driver.switchTo().alert();
+         String alt = alert.getText();
+        System.out.println("Alert text is " + alt);
+        Thread.sleep(5000);
+        alert.sendKeys("Test user");
+        alert.accept();
+    }
+
 
     @AfterClass
     public void tearDown() {
