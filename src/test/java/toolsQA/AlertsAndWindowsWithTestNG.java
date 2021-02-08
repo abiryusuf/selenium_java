@@ -9,6 +9,7 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 public class AlertsAndWindowsWithTestNG {
@@ -50,10 +51,28 @@ public class AlertsAndWindowsWithTestNG {
         ((JavascriptExecutor) driver).executeScript("arguments[0].click()", ele);
          Alert alert = driver.switchTo().alert();
          String alt = alert.getText();
-        System.out.println("Alert text is " + alt);
-        Thread.sleep(5000);
-        alert.sendKeys("Test user");
-        alert.accept();
+            System.out.println("Alert text is " + alt);
+            Thread.sleep(5000);
+            alert.sendKeys("Test user");
+            alert.accept();
+    }
+
+    //iFrame
+    @Test
+    public void iFrameTest(){
+        driver.get("https://toolsqa.com");
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        List<WebElement> iframe = driver.findElements(By.tagName("iframe"));
+//        WebElement ele = driver.findElement(By.tagName("iframe"));
+//        String iframe = ele.getText();
+        driver.switchTo().frame(0);
+        System.out.println("Index " + iframe);
+        System.out.println(iframe.size());
+
+        //Back to parent or main windows
+        driver.switchTo().defaultContent();
+
+
     }
 
 
