@@ -25,7 +25,7 @@ public class BrokenLinks {
 
     @Test
     public void brokenLinks(){
-        driver.get("https://demoqa.com/links");
+        driver.get("https://www.google.com");
 
         String url = "";
 
