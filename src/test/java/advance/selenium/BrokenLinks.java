@@ -9,6 +9,7 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
+import java.util.Iterator;
 import java.util.List;
 
 public class BrokenLinks {
@@ -28,7 +29,14 @@ public class BrokenLinks {
         String url = "";
 
         List<WebElement> allURLS = driver.findElements(By.tagName("a"));
-        System.out.println("Total link on the page " + allURLS.get(1));
+        System.out.println("Total link on the page " + allURLS.size());
+
+        Iterator<WebElement> iterator = allURLS.iterator();
+        while (iterator.hasNext()){
+            url = iterator.next().getText();
+            System.out.println(url);
+        }
+
 
 
     }
