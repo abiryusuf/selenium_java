@@ -25,21 +25,19 @@ public class DynamicTable {
     }
 
     @Test
-    public void test1(){
+    public void test1() {
         driver.get("https://demoqa.com/webtables");
-//        WebElement ele = driver.findElement(By.xpath("//*[contains(text(), \"First Name\")]"));
-//        System.out.println("Name " + ele.getText());
+        //Size the Table
+        WebElement ele = driver.findElement(By.xpath("//div[contains(@class, 'ReactTable')]"));
+        System.out.println("Size the Table " + ele.getSize());
 
-        WebElement ele1 = driver.findElement(By.xpath("//div[contains(@class, 'ReactTable')]"));
-        System.out.println("Total size " + ele1.getSize());
-        //Rows
+        //Row
         List<WebElement> rows = driver.findElements(By.xpath("//div[contains(@class, 'rt-tr-group')]"));
         System.out.println("Total rows " + rows.size());
 
         //Columns
-
-        List<WebElement> col = ele1.findElements(By.xpath("//div[contains(@class,'rt-td') and text()]/ancestor::div[contains(@class,'rt-tr-group')]"));
-        System.out.println("Total columns " + col.get(1).getText());
+        List<WebElement> col = driver.findElements(By.xpath("//div[contains(@class, 'rt-td')]/ancestor::div[contains(@class, 'rt-tr-group')]"));
+        System.out.println("Total columns " + col.size());
     }
 
     @AfterClass
