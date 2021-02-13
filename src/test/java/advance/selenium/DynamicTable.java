@@ -26,13 +26,20 @@ public class DynamicTable {
 
     @Test
     public void test1(){
-        driver.get("http://demo.guru99.com/test/web-table-element.php");
+        driver.get("https://demoqa.com/webtables");
+//        WebElement ele = driver.findElement(By.xpath("//*[contains(text(), \"First Name\")]"));
+//        System.out.println("Name " + ele.getText());
 
-        List<WebElement> col = driver.findElements(By.className(".//*[@id=\\\"leftcontainer\\\"]/table/thead/tr/th"));
-        System.out.println("Total column " + col.size());
+        WebElement ele1 = driver.findElement(By.xpath("//div[contains(@class, 'ReactTable')]"));
+        System.out.println("Total size " + ele1.getSize());
+        //Rows
+        List<WebElement> rows = driver.findElements(By.xpath("//div[contains(@class, 'rt-tr-group')]"));
+        System.out.println("Total rows " + rows.size());
 
-        List<WebElement> row = driver.findElements(By.xpath(".//*[@id='leftcontainer']/table/tbody/tr/td[1]"));
-        System.out.println("Total rows " + row.size());
+        //Columns
+
+        List<WebElement> col = ele1.findElements(By.xpath("//div[contains(@class,'rt-td') and text()]/ancestor::div[contains(@class,'rt-tr-group')]"));
+        System.out.println("Total columns " + col.get(1).getText());
     }
 
     @AfterClass
@@ -40,3 +47,4 @@ public class DynamicTable {
         driver.quit();
     }
 }
+//div[contains(@class,'rt-td') and text()]/ancestor::div[contains(@class,'rt-tr-group')]
