@@ -28,9 +28,9 @@ public class AlertsAndWindowsWithTestNG {
         System.out.println("Timer JavaScript Alert is triggered but it is not yet opened");
         //create a webdriver wait
         WebDriverWait wait = new WebDriverWait(driver, 10);
-        Alert alert = wait.until(ExpectedConditions.alertIsPresent());
+        Alert_Demo alertDemo = wait.until(ExpectedConditions.alertIsPresent());
         System.out.println("pop Up or it is time to out");
-        alert.accept();
+        alertDemo.accept();
         System.out.println("accepted");
 
     }
@@ -49,12 +49,12 @@ public class AlertsAndWindowsWithTestNG {
         //get text
         WebElement ele = driver.findElement(By.id("promtButton"));
         ((JavascriptExecutor) driver).executeScript("arguments[0].click()", ele);
-         Alert alert = driver.switchTo().alert();
-         String alt = alert.getText();
+         Alert_Demo alertDemo = driver.switchTo().alert();
+         String alt = alertDemo.getText();
             System.out.println("Alert text is " + alt);
             Thread.sleep(5000);
-            alert.sendKeys("Test user");
-            alert.accept();
+            alertDemo.sendKeys("Test user");
+            alertDemo.accept();
     }
 
     //iFrame

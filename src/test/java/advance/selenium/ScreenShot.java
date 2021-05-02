@@ -27,7 +27,9 @@ public class ScreenShot {
     @Test
     public void screenShot() throws IOException {
         driver.get("https://demoqa.com");
-        // convert webdrive to take screen shot
+    // convert webdrive to take screen shot
+// In the above code, we convert the WebDriver object (driver) to TakeScreenshot.
+//And call getScreenshotAs() method to create an image file by providing the parameter OutputType.FILE.
         File screesShoteFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
 
         try {

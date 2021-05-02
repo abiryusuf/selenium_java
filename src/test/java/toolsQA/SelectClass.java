@@ -8,12 +8,11 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.ui.Select;
 
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
-public class WebdriverCommandsWithJunit {
+public class SelectClass {
 
     WebDriver driver = null;
 
@@ -100,7 +99,7 @@ public class WebdriverCommandsWithJunit {
         WebElement ele = driver.findElement(By.id("oldSelectMenu"));
         WebElement ele1 = driver.findElement(By.id("cars"));
 
-        Select select = new Select(ele);
+        org.openqa.selenium.support.ui.Select select = new org.openqa.selenium.support.ui.Select(ele);
    //Display all value
         List<WebElement> lst = select.getOptions();
         System.out.println("Display all value");
@@ -114,7 +113,7 @@ public class WebdriverCommandsWithJunit {
 
         //Multiple
         System.out.println("multiple option");
-        Select select1 = new Select(ele1);
+        org.openqa.selenium.support.ui.Select select1 = new org.openqa.selenium.support.ui.Select(ele1);
         List<WebElement> sec = select1.getAllSelectedOptions();
         for (WebElement option1: sec)
             System.out.println(option1.getText());

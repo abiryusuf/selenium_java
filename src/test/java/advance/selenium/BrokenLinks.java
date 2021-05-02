@@ -54,7 +54,7 @@ public class BrokenLinks {
             HttpURLConnection http = (HttpURLConnection)url.openConnection();
             http.setConnectTimeout(5000);
             http.connect();
-            if (http.getResponseCode()>=400){
+            if (http.getResponseCode()>=400 || http.getResponseCode()>=403){
                 System.out.println(linkUrl + " " +http.getResponseMessage()+ "is a broken Links");
             } else {
                 System.out.println(linkUrl + " " + http.getResponseMessage());
