@@ -88,6 +88,25 @@ public class TestNg {
         browser.sendKeys("/Users/abiryusuf/IdeaProjects/selenium_java/file");
     }
 
+    @Test
+    public void getText(){
+        driver.get("https://www.google.com/");
+        String ele = driver.findElement(By.xpath("//*[@id='gbw']/div/div/div[1]/div[1]/a")).getText();
+        System.out.println("Text" + ele);
+
+
+    }
+    @Test
+    public void selectTest(){
+        WebElement ele;
+        driver.get("https://www.americantinceilings.com/pattern1/");
+        ele = driver.findElement(By.xpath("/html/body/main/div[1]/section[1]/div[1]/div/div[2]/div[4]/amp-selector/ul/li[16]/div/amp-img/img"));
+        ele.click();
+        ele = driver.findElement(By.xpath("//*[@id=\"installation\"]/div[1]/div/amp-img/img"));
+        ele.click();
+        SelectClass select = new SelectClass();
+        select.driver
+    }
     @AfterMethod
     public void tearDown() {
         driver.quit();
