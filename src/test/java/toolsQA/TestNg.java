@@ -105,7 +105,7 @@ public class TestNg {
         ele = driver.findElement(By.xpath("//*[@id=\"installation\"]/div[1]/div/amp-img/img"));
         ele.click();
         SelectClass select = new SelectClass();
-        select.driver
+
     }
     @AfterMethod
     public void tearDown() {
