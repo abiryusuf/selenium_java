@@ -41,7 +41,7 @@ public class Assessment_1 {
 //        WebElement element = driver.findElement(By.xpath("/html/body/main/div[1]/section[1]/div[1]/div/div[2]/div[11]/div[3]/button"));
 //        JavascriptExecutor executor = (JavascriptExecutor)driver;
 //        executor.executeScript("arguments[0].click();", element);
-//        driver.findElement(By.xpath("/html/body/main/div[1]/section[1]/div[1]/div/div[2]/div[11]/div[3]/button")).click();
+        driver.findElement(By.xpath("/html/body/main/div[1]/section[1]/div[1]/div/div[2]/div[11]/div[3]/button")).click();
 //
 
 
