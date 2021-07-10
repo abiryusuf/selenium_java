@@ -1,7 +1,14 @@
 package advance.selenium;
 
+import org.openqa.selenium.Platform;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.annotations.Test;
+
+import java.net.URL;
+
 /*
 Selenium grid is tools, it provides running multiple test across different browsers and
 operating systems in parallel
@@ -30,10 +37,19 @@ java -jar selenium-server-standalone-3.141.59.jar -role hub
 /Users/abiryusuf/Documents/JAR
 * */
 public class Grid {
-    public static WebDriver driver;
+    WebDriver driver;
 
     @Test
     public void gridTest(){
+        driver = new FirefoxDriver();
+        String url = "http://localhost:4444/wd/hub";
+        DesiredCapabilities desiredCapabilities = new DesiredCapabilities();
+        desiredCapabilities.setBrowserName("firefox");
+        desiredCapabilities.setPlatform(Platform.MAC);
+        driver = new RemoteWebDriver((new URL(url)), desiredCapabilities);
+        driver.get("https://www.google.com");
+        System.out.println(driver.getCurrentUrl());
+        driver.close();
 
     }
 }
