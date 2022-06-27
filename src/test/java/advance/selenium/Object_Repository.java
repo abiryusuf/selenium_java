@@ -5,6 +5,8 @@ package advance.selenium;
 //    Properties obj = new Properties();
 //    FileInputStream objfile = new FileInputStream(System.getProperty("user.dir")+"\\application.properties");
 //    obj.load(objfile);
+
+
 //// Nagigate to link Mobile Testing and Back
 //    driver.findElement(By.xpath(obj.getProperty("MobileTesting"))).click();
 //    driver.navigate().back();

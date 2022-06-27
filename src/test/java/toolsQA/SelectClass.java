@@ -15,11 +15,12 @@ import java.util.concurrent.TimeUnit;
 public class SelectClass {
 
     WebDriver driver = null;
+    WebDriver webElement = null;
 
     @Before
     public void setUp(){
         WebDriverManager.chromedriver().setup();
-        driver = new ChromeDriver();
+        webElement = new ChromeDriver();
 
     }
     @Test
